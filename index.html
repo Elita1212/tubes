@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Ajar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="beranda">
+
+    <header class="navbar">
+        <a href="index.html" aria-label="Teman Ajar">
+            <img src="logotemanajar.jpeg" alt="Teman Ajar" class="logo-kecil">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">&#9776;</button>
+        <nav id="menuNav">
+            <a href="index.html">BERANDA</a>
+            <a href="mentor.html">PENCARIAN MENTOR</a>
+            <a href="daftar.html" class="btn-pill btn-putih">DAFTAR</a>
+            <a href="login.html" class="btn-pill btn-gelap">LOGIN</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="hero-teks">
+            <div class="kecil">BELAJAR BARENG DI</div>
+            <div class="judul">TEMAN AJAR 🎓</div>
+            <p>Temukan mentor dari teman angkatan atau senior, ikuti sesi mentoring, dan pahami materi kuliah yang kamu rasa sulit.</p>
+            <a href="daftar.html" class="btn-mulai">MULAI SEKARANG <span>&rarr;</span></a>
+        </section>
+
+        <div class="hero-gambar">
+            <img src="temanajarkece.jpeg" alt="Ilustrasi belajar bareng"
+                 onerror="this.parentNode.textContent='Letakkan gambar temanajarkece.jpeg di folder ini'">
+        </div>
+    </main>
+
+    <section class="fitur" id="fitur">
+        <div class="item">
+            <span class="ikon">👤</span>
+            <div><h3>CARI MENTOR</h3><p>Temukan teman atau senior yang menguasai topik tertentu.</p></div>
+        </div>
+        <div class="item">
+            <span class="ikon">📅</span>
+            <div><h3>IKUTI SESI</h3><p>Daftar pada jadwal mentoring yang sesuai.</p></div>
+        </div>
+        <div class="item">
+            <span class="ikon">🎥</span>
+            <div><h3>BELAJAR ONLINE</h3><p>Belajar bersama melalui Google Meet.</p></div>
+        </div>
+        <div class="item">
+            <span class="ikon">📄</span>
+            <div><h3>AKSES MATERI</h3><p>Dapatkan materi dan catatan setelah sesi selesai.</p></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

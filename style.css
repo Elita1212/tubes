@@ -1,0 +1,399 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --nav: #133e31;
+    --nav-hover: #1d5a47;
+    --mint-atas: #97ffd0;
+    --mint-bawah: #ebfff6;
+    --auth-atas: #7cf4bd;
+    --auth-bawah: #eff4f2;
+    --kartu: #d9d9d9;
+    --input: #948e8e;
+    --panel: #dfede7;
+    --judul: #078203;
+    --teks: #111111;
+    --font-judul: "Chakra Petch", "Segoe UI", sans-serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+body {
+    font-family: var(--font-judul);
+    min-height: 100vh;
+    color: var(--teks);
+    background: linear-gradient(to bottom, var(--mint-atas) 0%, var(--mint-bawah) 100%) fixed;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 32px;
+    gap: 32px;
+    background: linear-gradient(to bottom, var(--auth-atas) 0%, var(--auth-bawah) 100%);
+    position: relative;
+}
+
+.auth::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    bottom: 5%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%);
+}
+
+.sisi-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sisi-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-auth {
+    width: min(360px, 85%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+}
+
+.auth .sisi {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.kartu {
+    background: var(--kartu);
+    border: 2px solid #000;
+    border-radius: 18px;
+    padding: 28px 32px 32px;
+    width: min(440px, 100%);
+}
+
+.kartu h1 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 26px;
+    color: #111;
+}
+
+.kembali-kartu {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: .75rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.kembali-kartu:hover { text-decoration: underline; }
+
+.baris {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.baris label {
+    font-size: .75rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.baris input {
+    background: var(--input);
+    border: 2px solid transparent;
+    border-radius: 14px;
+    height: 36px;
+    padding: 0 12px;
+    font-family: inherit;
+    font-size: .85rem;
+    outline: none;
+    transition: border-color .2s, background .2s;
+}
+
+.baris input:focus { border-color: #000; background: #a29d9d; }
+
+.tombol-hitam {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    height: 38px;
+    border: none;
+    border-radius: 14px;
+    background: #000;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .15s, background .2s;
+}
+
+.tombol-hitam:hover { background: #222; transform: translateY(-1px); }
+
+.kartu-login {
+    border-radius: 20px;
+    padding: 28px 32px 32px;
+    width: min(380px, 100%);
+}
+
+.header-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--nav);
+}
+
+.ikon-masuk { margin-bottom: 8px; color: #111; }
+
+.header-login h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    color: var(--nav);
+}
+
+.baris-input-ikon {
+    display: flex;
+    align-items: center;
+    background: #8b8585;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    height: 42px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.baris-input-ikon:focus-within {
+    border-color: #000;
+    background: #7a7474;
+}
+
+.ikon-input {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    color: #dfdfdf;
+}
+
+.baris-input-ikon input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    font-family: inherit;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.baris-input-ikon input::placeholder {
+    color: #dfdfdf;
+    font-weight: 500;
+}
+
+.tautan-lupa {
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 600;
+    margin: 8px 0 16px;
+    color: #111;
+}
+
+.tautan-lupa a, .tautan-bawah-baru a {
+    color: #0088cc;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.tombol-hitam-kapsul {
+    display: block;
+    width: 100%;
+    height: 42px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: transform .15s, background .2s;
+    margin-top: 12px;
+}
+
+.tombol-hitam-kapsul:hover { background: #222; transform: translateY(-1px); }
+
+.tautan-bawah-baru {
+    text-align: center;
+    font-size: .78rem;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #111;
+}
+
+.pesan { margin-top: 14px; min-height: 1.2em; text-align: center; font-size: .78rem; font-weight: 600; }
+.pesan.error { color: #b3261e; }
+.pesan.sukses { color: #1b6b3a; }
+.tautan-bawah { margin-top: 14px; text-align: center; font-size: .75rem; }
+.tautan-bawah a { font-weight: 700; text-decoration: underline; }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav);
+    border-radius: 0 0 18px 18px;
+    padding: 8px 28px;
+}
+
+.navbar > a:first-child { display: flex; background: #f1fbf6; border-radius: 12px; padding: 3px 8px; }
+.logo-kecil { height: 44px; width: 60px; object-fit: contain; display:block; mix-blend-mode:multiply;}
+.navbar nav { display: flex; align-items: center; gap: 18px; }
+.navbar nav a { font-weight: 700; font-size: .8rem; color: #fff; }
+.btn-pill { padding: 7px 26px; border-radius: 999px; font-size: .75rem; }
+.btn-putih { background: #fff; color: #111 !important; }
+.btn-gelap { background: #313131; }
+.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+.hero { display: flex; align-items: center; justify-content: center; gap: 60px; padding: 50px 28px 30px; max-width: 1000px; margin: 0 auto; }
+.hero-teks { max-width: 340px; font-family: var(--font-serif); color: var(--teks); }
+.hero-teks .kecil { font-size: 1.2rem; letter-spacing: 1px; font-weight: 600; }
+.hero-teks .judul { font-size: 1.5rem; color: var(--judul); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+.hero-teks p { font-size: .95rem; line-height: 1.35; font-weight: 600; margin-bottom: 18px; }
+.btn-mulai {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-family: var(--font-judul);
+    font-weight: 700;
+    font-size: .75rem;
+    transition: transform .15s;
+}
+.btn-mulai:hover { transform: translateX(4px); }
+
+.hero-gambar {
+    width: 260px;
+    height: 260px;
+    overflow: hidden;
+    border: 3px solid #1f2b27;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #cfe9dc, #eaf7f0);
+    color: #3b4a44;
+    font-size: .8rem;
+}
+.hero-gambar img { width: 100%; height: 100%; object-fit: cover; }
+
+.fitur {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 40px auto;
+    background: var(--panel);
+    border-radius: 14px;
+    overflow: hidden;
+}
+.fitur .item { display: flex; gap: 10px; align-items: center; padding: 16px 14px; border-left: 2px solid #000; color: var(--teks); cursor: default; }
+.fitur .item:first-child { border-left: none; }
+.fitur .ikon { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+.fitur h3 { font-size: .7rem; margin-bottom: 4px; }
+.fitur p { font-size: .6rem; line-height: 1.3; color: #222; }
+
+.halaman-dalam { max-width: 1000px; margin: 0 auto; padding: 28px; color: var(--teks); }
+.halaman-dalam h2 { font-size: 1.6rem; margin: 14px 0 18px; }
+.kembali { display: inline-block; font-weight: 700; font-size: .8rem; color: var(--nav); }
+.kembali:hover { text-decoration: underline; }
+
+.kolom-cari {
+    width: 100%;
+    max-width: 420px;
+    height: 38px;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #111;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-family: inherit;
+    font-size: .85rem;
+    outline: none;
+}
+.kolom-cari:focus { border-color: var(--nav); }
+
+.grid-info { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.kartu-info { background: var(--panel); border: 2px solid #000; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.kartu-info h3 { font-size: 1rem; }
+.kartu-info .sub { font-size: .75rem; color: #333; }
+.chip-topik { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-topik span { background: var(--nav); color: #fff; border-radius: 999px; padding: 3px 10px; font-size: .68rem; }
+
+.btn-kecil {
+    margin-top: auto;
+    align-self: flex-start;
+    background: var(--nav);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 7px 18px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: .72rem;
+    cursor: pointer;
+    transition: transform .15s, background .2s;
+}
+.btn-kecil:hover { background: var(--nav-hover); transform: translateY(-1px); }
+
+@media (max-width: 800px) {
+    .menu-toggle { display: block; }
+    .navbar { flex-wrap: wrap; }
+    .navbar nav { display: none; flex-direction: column; width: 100%; padding: 12px 0; }
+    .navbar nav.buka { display: flex; }
+
+    .hero { flex-direction: column; text-align: center; gap: 28px; }
+    .fitur { grid-template-columns: 1fr 1fr; margin: 30px 16px; }
+    .fitur .item { border-left: none; border-top: 2px solid #000; }
+
+    .auth {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+    .auth::before { display: none; }
+    .sisi-logo { display: none; }
+}
+
+@media (max-width: 480px) {
+    .kartu { padding: 22px 20px 26px; }
+    .kartu h1 { font-size: 1.6rem; margin-bottom: 20px; }
+    .baris { grid-template-columns: 78px 1fr; gap: 6px; }
+    .baris label { padding-right: 4px; }
+}
